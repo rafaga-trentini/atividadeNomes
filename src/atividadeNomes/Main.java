@@ -11,6 +11,7 @@ public class Main {
 		System.out.print("Informe um nome: ");
 		String nome = lerNome.next();
 		nome.toLowerCase();
+		long inicio = System.currentTimeMillis();
 		for (int i = 0; i <10; i++) {
 			Scanner in = new Scanner(new FileReader("./arquivosNomes/nomescompletos-0"+i+".txt"));
 			int linha = 0;
@@ -22,6 +23,9 @@ public class Main {
 			    }
 			}
 		}
+		long fim = System.currentTimeMillis();
+		
+		System.out.println("Tempo decorrido: "+((fim-inicio)));
 		
 	}
 

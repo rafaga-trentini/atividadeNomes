@@ -27,6 +27,8 @@ public class MinhaThread implements Runnable{
 			    	System.out.println("Arquivo: nomescompletos-0"+this.i+".txt | Linha: "+linha+" | Nome: "+line);
 			    }
 			}
+			Thread.currentThread();
+			Thread.yield();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
